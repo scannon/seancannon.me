@@ -1,0 +1,11 @@
+name: Sean
+super: true
+id: 06c4481b-212c-4862-9d64-8b5c7e48a46b
+password_hash: $2y$10$nGWwpMl1AftWC9ZI.8WUWOSY/faAW4eDP/ne69u38STUpN6rARP2S
+preferences:
+  collections:
+    pages:
+      columns:
+        - title
+        - template
+        - slug

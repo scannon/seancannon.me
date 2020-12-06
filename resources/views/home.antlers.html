@@ -1,0 +1,28 @@
+<div class="home mt-16">
+    <div class="content">
+        <h1>{{ headline ?? title | widont:2 }}</h1>
+    </div>
+
+
+    <div class="recent-posts content my-40">
+
+        {{ collection from="blog" as="blog" limit="1" }}
+        <div class="post-list content">
+
+
+
+            {{ blog }}
+            <div class="my-12">
+                <h2 class="mb-0 text-2xl font-extrabold tracking-tight"><a href="{{url}}"
+                        class="no-underline">{{ title | title | widont }}</a>
+                </h2>
+                <span class="text-gray-500 text-sm">{{ date }}</span>
+                <p class="leading-relaxed mt-2"> {{ excerpt | widont }} </p>
+            </div>
+            {{ /blog }}
+
+        </div>
+        {{ /collection }}
+    </div>
+
+</div>

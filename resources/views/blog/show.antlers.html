@@ -1,0 +1,12 @@
+<div class="blog-post mt-16">
+
+    <h1 class="mb-12 font-bold"> {{ title | title }} </h1>
+    <div
+        class="bg-gray-800 text-cream inline-block text-sm mb-10 pr-4 pl-16 -ml-16 uppercase tracking-widest py-1 rounded-r-full">
+        Published on {{ date }}
+    </div>
+    <div class="content mt-4">
+        {{ content | widont }}
+    </div>
+
+</div>

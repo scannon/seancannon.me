@@ -1,0 +1,39 @@
+<div class="blog mt-16">
+    <h1 class="text-4xl lg:text-6xl font-bold tracking-tight mb-6">
+        {{ headline ?? title }}</h1>
+
+    {{ collection from="blog" as="blog" paginate="10" }}
+    <div class="post-list content">
+
+        {{ if no_results }}
+        <h2 class="italic tracking-tight">Nothing to see here.</h2>
+        {{ /if }}
+
+        {{ blog }}
+        <div class="my-12">
+            <h2 class="mb-0 text-2xl font-extrabold tracking-tight"><a href="{{url}}"
+                    class="no-underline">{{ title | title | widont }}</a>
+            </h2>
+            <span class="text-gray-500 text-sm">{{ date }}</span>
+            <p class="leading-relaxed mt-2"> {{ excerpt | widont }} </p>
+        </div>
+        {{ /blog }}
+
+        {{ paginate }}
+        {{ if prev_page || next_page }}
+        <div class="flex justify-between text-xl pt-16 font-bold">
+            <a href="{{ prev_page }}" class="{{ ! prev_page ?= 'opacity-25' }}">
+                &larr; Previous
+            </a>
+            <a href="{{ next_page }}" class="{{ ! next_page ?= 'opacity-25' }}">
+                Next &rarr;
+            </a>
+        </div>
+        {{ /if }}
+        {{ /paginate }}
+
+
+    </div>
+    {{ /collection }}
+
+</div>
