@@ -45,5 +45,5 @@ jobs:
           server: ${{ secrets.FTP_URL }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: /storage/app/static/
+          local-dir: /home/runner/work/seancannon.me/seancannon.me/storage/app/static/
           server-dir: /public_html/seancannon.me/
