@@ -1,26 +1,27 @@
 <div class="home mt-16">
-    <div class="content">
-        <h1>{{ headline ?? title | widont:2 }}</h1>
-    </div>
 
+    <h1>{{ headline ?? title | widont:2 }}</h1>
 
-    <div class="recent-posts content my-40">
+    <div class="recent-posts my-40">
+        <div class="flex content items-center">
+            <h4 class="">Most recent blog post</h4>
+
+        </div>
 
         {{ collection from="blog" as="blog" limit="1" }}
         <div class="post-list content">
-
-
-
             {{ blog }}
-            <div class="my-12">
+            <div class="mb-12">
                 <h2 class="mb-0 text-2xl font-extrabold tracking-tight"><a href="{{url}}"
                         class="no-underline">{{ title | title | widont }}</a>
                 </h2>
-                <span class="text-gray-500 text-sm">{{ date }}</span>
+                <div class="flex mt-2 items-center">
+                    {{ svg src="retro/sunrise" class="h-8 w-8 text-sky-blue"}}
+                    <span class="text-gray-500 text-sm ml-1">{{ date }}</span>
+                </div>
                 <p class="leading-relaxed mt-2"> {{ excerpt | widont }} </p>
             </div>
             {{ /blog }}
-
         </div>
         {{ /collection }}
     </div>

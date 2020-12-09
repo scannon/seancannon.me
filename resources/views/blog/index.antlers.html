@@ -1,6 +1,5 @@
 <div class="blog mt-16">
-    <h1 class="text-4xl lg:text-6xl font-bold tracking-tight mb-6">
-        {{ headline ?? title }}</h1>
+    <h1>{{ headline ?? title }}</h1>
 
     {{ collection from="blog" as="blog" paginate="10" }}
     <div class="post-list content">
@@ -14,14 +13,21 @@
             <h2 class="mb-0 text-2xl font-extrabold tracking-tight"><a href="{{url}}"
                     class="no-underline">{{ title | title | widont }}</a>
             </h2>
-            <span class="text-gray-500 text-sm">{{ date }}</span>
+
+            <div class="flex mt-2 items-center">
+
+                {{ svg src="retro/sunrise" class="h-8 w-8 text-sky-blue"}}
+                <span class="text-gray-500 text-sm ml-1">{{ date }}</span>
+
+            </div>
             <p class="leading-relaxed mt-2"> {{ excerpt | widont }} </p>
         </div>
         {{ /blog }}
 
         {{ paginate }}
         {{ if prev_page || next_page }}
-        <div class="flex justify-between text-xl pt-16 font-bold">
+
+        <div class="flex justify-between text-xl font-bold">
             <a href="{{ prev_page }}" class="{{ ! prev_page ?= 'opacity-25' }}">
                 &larr; Previous
             </a>

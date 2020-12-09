@@ -14,15 +14,21 @@
 
 <body class="antialiased">
 
-    <div>
-        {{ partial:nav }}
-    </div>
-
     <div class="mx-auto w-11/12 lg:w-6/12">
-        {{ template_content }}
+        <header>
+            {{ partial:nav }}
+        </header>
+
+        <div>
+            {{ template_content }}
+        </div>
+
+        <footer>
+            {{ partial:_footer }}
+        </footer>
     </div>
 
-    <script src="{{ mix src='/js/site.js' }}"></script>
 </body>
+<script src="{{ mix src='/js/site.js' }}"></script>
 
 </html>

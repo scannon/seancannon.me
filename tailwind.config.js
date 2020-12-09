@@ -24,11 +24,15 @@ module.exports = {
         },
         extend: {
             colors: {
+                melon: '#ffa69e',
+                'black-coral': '#596475',
+                'light-purple': '#5B5F97',
+                'hookers-green': '#4E6E58',
+                'sky-blue': '#66CED6',
                 cream: '#f7fff7',
                 'naples-yellow': '#ffe66d',
                 'rich-black': '#0C1824',
                 'baby-blue': '#6CA6C1',
-                melon: '#ffa69e',
                 'steel-blue': '#3A7CA5',
             },
         },
