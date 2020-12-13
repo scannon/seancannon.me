@@ -14,18 +14,17 @@
 
 <body class="antialiased">
 
-    <div class="mx-auto w-11/12 lg:w-6/12">
+    <div id="main" class="mx-auto w-11/12 lg:w-6/12">
         <header>
             {{ partial:nav }}
         </header>
 
-        <div>
+        <div id="content">
             {{ template_content }}
         </div>
-
-        <footer>
-            {{ partial:_footer }}
-        </footer>
+    </div>
+    <div id="footer">
+        {{ partial:footer }}
     </div>
 
 </body>

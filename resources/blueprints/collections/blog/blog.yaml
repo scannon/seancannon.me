@@ -35,14 +35,6 @@ sections:
           type: markdown
           icon: markdown
           listable: hidden
-      -
-        handle: author
-        field:
-          mode: default
-          display: Author
-          type: users
-          icon: users
-          listable: hidden
   sidebar:
     display: Sidebar
     fields:
@@ -61,3 +53,21 @@ sections:
           localizable: true
           validate:
             - required
+      -
+        handle: categories
+        field:
+          type: terms
+          taxonomies:
+            - categories
+          display: Categories
+          mode: select
+          listable: hidden
+          max_items: 1
+      -
+        handle: author
+        field:
+          mode: default
+          display: Author
+          type: users
+          icon: users
+          listable: hidden

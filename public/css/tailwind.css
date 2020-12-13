@@ -603,6 +603,19 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
+.post-list-heading a {
+    font-weight: 800;
+    background-image:linear-gradient(180deg,transparent 70%, #ffa69e 0);
+    background-position:4px bottom;
+    background-repeat:no-repeat
+  }
+
+.post-list-heading a:hover {
+    --text-opacity:1;
+    color:rgba(12,24,36,var(--text-opacity));
+    background-image:linear-gradient(180deg,transparent 20%, #ffa69e 0)
+  }
+
 .content > h2 {
     font-size: 1.5rem;
     font-weight: 700;
@@ -658,19 +671,6 @@ h1 {
 .content img {
     margin-top: 3rem;
     margin-bottom: 3rem;
-  }
-
-.content a {
-    font-weight: 800;
-    background-image:linear-gradient(180deg,transparent 70%, #ffa69e 0);
-    background-position:4px bottom;
-    background-repeat:no-repeat
-  }
-
-.content a:hover {
-    --text-opacity:1;
-    color:rgba(12,24,36,var(--text-opacity));
-    background-image:linear-gradient(180deg,transparent 20%, #ffa69e 0)
   }
 
 .content ul:not(.list-none) {

@@ -1,13 +1,14 @@
-<div class="container mx-auto flex flex-wrap p-5 pl-0 flex-col md:flex-row items-center">
+<div class="container mx-auto flex flex-wrap py-5 flex-col md:flex-row items-center">
     <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
         {{ nav include_home="true" }}
         <a href="{{ url }}"
-            class="mr-5 hover:text-gray-900 {{ is_current || is_parent ?= 'underline font-medium text-hookers-green'}}">{{ title }}</a>
+            class="mr-5 hover:text-gray-900 hover:underline {{ is_current || is_parent ?= 'underline font-medium text-blue-900'}}">{{ title }}</a>
         {{ /nav }}
     </nav>
-    <a
+    <a href="{{ homepage }}"
         class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
-
+        {{ svg src="retro/cool-s-fat" class="w-20 h-20 text-indigo-600"}}
+        <span class="ml-3 text-xl"></span>
     </a>
     <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
     </div>

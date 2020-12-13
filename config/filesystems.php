@@ -72,6 +72,11 @@ return [
             'visibility' => 'public',
         ],
 
+        'svg' => [
+            'driver' => 'local',
+            'root' => public_path('svg'),
+        ],
+
     ],
 
     /*

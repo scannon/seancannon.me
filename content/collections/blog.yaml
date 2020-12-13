@@ -2,6 +2,8 @@ title: Blog
 template: blog/show
 layout: layout
 mount: 85a018f1-7289-4d6b-b187-baa1a4a51ab3
+taxonomies:
+  - categories
 revisions: false
 route: '{mount}/{slug}'
 date: true

@@ -10,6 +10,22 @@ h1 {
     @apply text-4xl font-bold tracking-tight leading-none mb-6;
 }
 
+ .post-list-heading {
+        a {
+            @apply font-extrabold;
+
+            background-image:linear-gradient(180deg,transparent 70%, #ffa69e 0);
+            background-position:4px bottom;
+            background-repeat:no-repeat
+        }
+
+        a:hover {
+            --text-opacity:1;
+            color:rgba(12,24,36,var(--text-opacity));
+            background-image:linear-gradient(180deg,transparent 20%, #ffa69e 0)
+        }
+    }
+
 .content {
     > h2 {
         @apply text-2xl font-bold leading-none mt-4 py-6;
@@ -41,20 +57,6 @@ h1 {
 
     img {
         @apply my-12;
-    }
-
-    a {
-        @apply font-extrabold;
-
-        background-image:linear-gradient(180deg,transparent 70%, #ffa69e 0);
-        background-position:4px bottom;
-        background-repeat:no-repeat
-    }
-
-    a:hover {
-        --text-opacity:1;
-        color:rgba(12,24,36,var(--text-opacity));
-        background-image:linear-gradient(180deg,transparent 20%, #ffa69e 0)
     }
 
     ul:not(.list-none) {
