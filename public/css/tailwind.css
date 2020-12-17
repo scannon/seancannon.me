@@ -642,6 +642,20 @@ h1 {
     padding-bottom: 1.5rem;
   }
 
+.content a {
+    text-decoration: underline;
+    --text-opacity: 1;
+    color: #0C1824;
+    color: rgba(12, 24, 36, var(--text-opacity));
+  }
+
+.content a:hover {
+    text-decoration: underline;
+    --text-opacity: 1;
+    color: #66CED6;
+    color: rgba(102, 206, 214, var(--text-opacity));
+  }
+
 .content > p {
     margin-bottom: 1.5rem;
     font-size: 1.125rem;
@@ -729,6 +743,7 @@ h1 {
     font-size: 0.875rem;
     line-height: 2;
     margin-bottom: 1.5rem;
+    overflow-x: auto;
   }
 
 .content > pre code, pre code.content, .content > ul li pre code, .content > ol li pre code {
