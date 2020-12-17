@@ -2,7 +2,7 @@
     <h1>{{ headline ?? title }}</h1>
 
     {{ collection from="blog" as="blog" paginate="10" }}
-    <div class="post-list content">
+    <div class="post-list">
         {{ if no_results }}
         <h2 class="italic tracking-tight">Nothing to see here.</h2>
         {{ /if }}
