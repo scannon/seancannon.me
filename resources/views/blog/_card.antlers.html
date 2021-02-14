@@ -1,15 +1,9 @@
-<div class="mx-auto px-8 py-4 rounded-lg shadow-md mb-10">
+<div class="mx-auto py-4 mb-10">
     <div class="flex justify-between items-center">
         <span class="font-light text-gray-600 text-sm flex items-center">
             {{ svg src="retro/joystick" class="h-6"}}
             <p class="ml-2">{{ date }}</p>
         </span>
-
-        {{ if categories }}
-        {{ categories }}
-        <a class="px-3 py-1 bg-indigo-400 text-gray-100 text-sm font-bold rounded hover:bg-gray-500">{{ title }}</a>
-        {{ /categories }}
-        {{ /if }}
     </div>
 
     <div class="mt-2 post-list-heading">
@@ -18,10 +12,7 @@
         <p class="mt-2 text-gray-600">{{ excerpt }}</p>
     </div>
 
-    <div class="flex justify-between items-center mt-4">
+    <!-- <div class="flex justify-between items-center mt-4">
         <a href="{{ url }}" class="text-indigo-600 hover:underline">Read more</a>
-
-        <div class="flex items-center">
-        </div>
-    </div>
+    </div> -->
 </div>

@@ -6,7 +6,6 @@ module.exports = {
     theme: {
         fontFamily: {
             sans: [
-                'Inter',
                 '-apple-system',
                 'BlinkMacSystemFont',
                 '"Segoe UI"',
@@ -24,19 +23,15 @@ module.exports = {
         },
         extend: {
             colors: {
+                grey: '#f2f2f2',
+                onyx: '#444444',
                 melon: '#ffa69e',
                 'black-coral': '#596475',
-                'light-purple': '#5B5F97',
-                'hookers-green': '#4E6E58',
                 'sky-blue': '#66CED6',
-                cream: '#f7fff7',
                 'naples-yellow': '#ffe66d',
                 'rich-black': '#0C1824',
-                'baby-blue': '#6CA6C1',
-                'steel-blue': '#3A7CA5',
             },
         },
     },
     variants: {},
-    // plugins: [require('@tailwindcss/typography')],
 };
