@@ -1,4 +1,23 @@
-<div class="container mx-auto flex flex-wrap py-5 flex-col md:flex-row items-center">
+<!-- header partial -->
+<header>
+    <div class="pt-16 pb-2 my-3">
+
+        <h1 class="text-4xl font-bold">{{ headline ?? title | widont:2 }}</h1>
+        <p class="font-light">{{ subheading }}</p>
+
+        <div class="nav flex py-3 text-sm font-medium border-b">
+            {{ nav include_home="true"}}
+            <a href="{{ url }}" class="hover:text-red-500">{{ title }}</a>
+            <span class="px-1 text-red-500"></span>
+            {{ /nav }}
+        </div>
+
+    </div>
+</header>
+<!-- /header partial-->
+
+
+{{# <div class="container mx-auto flex flex-wrap py-5 flex-col md:flex-row items-center">
     <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
         {{ nav include_home="true" }}
         <a href="{{ url }}"
@@ -15,4 +34,4 @@
     </a>
     <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
     </div>
-</div>
+</div> #}}

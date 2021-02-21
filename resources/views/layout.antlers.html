@@ -14,20 +14,22 @@
 
 <body>
 
-    <div id="main" class="mx-auto flex-1 w-11/12 lg:w-6/12">
-        <header>
-            {{ partial:nav }}
-        </header>
+    <div class="container max-w-2xl mx-auto px-3">
 
-        <div id="content">
+        {{ partial:_nav }}
+
+        <!-- content! -->
+        <main>
             {{ template_content }}
-        </div>
+        </main>
+
     </div>
-    <div id="footer">
-        {{ partial:footer }}
-    </div>
+
+    {{ partial:_footer }}
+
 
 </body>
+
 <script src="{{ mix src='/js/site.js' }}"></script>
 
 </html>
