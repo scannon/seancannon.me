@@ -1,37 +1,18 @@
 <!-- header partial -->
 <header>
-    <div class="pt-16 pb-2 my-3">
-
-        <h1 class="text-4xl font-bold">{{ headline ?? title | widont:2 }}</h1>
-        <p class="font-light">{{ subheading }}</p>
-
-        <div class="nav flex py-3 text-sm font-medium border-b">
-            {{ nav include_home="true"}}
-            <a href="{{ url }}" class="hover:text-red-500">{{ title }}</a>
-            <span class="px-1 text-red-500"></span>
-            {{ /nav }}
-        </div>
-
-    </div>
-</header>
-<!-- /header partial-->
-
-
-{{# <div class="container mx-auto flex flex-wrap py-5 flex-col md:flex-row items-center">
-    <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto">
-        {{ nav include_home="true" }}
-        <a href="{{ url }}"
-            class="mr-5 hover:text-gray-900 transform hover:underline hover:scale-110 {{ is_current || is_parent ?= 'underline font-medium text-blue-900'}}">{{
-            title }}</a>
-        {{ /nav }}
-    </nav>
-    <a href="{{ homepage }}"
-        class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center text-gray-900 lg:items-center lg:justify-center mb-4 md:mb-0">
-        {{ svg src="retro/cool-s-fat" class="w-20 h-20 inline-block text-black-coral
-        transform
-        hover:scale-125"}}
-        <span class="ml-3 text-xl"></span>
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="flex font-medium items-center mb-4 md:mb-0 no-underline" href="{{ homepage }}">
+      {{ svg src="retro/cool-s-fat" class="h-6"}}
+      <span class="ml-3 text-xl">Sean Cannon</span>
     </a>
-    <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
-    </div>
-</div> #}}
+
+    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+      {{ nav include_home="true" }}
+      <a href="{{ url }}" class="m-2 {{ is_current || is_parent ?= ' no-underline text-headline font-bold '}}">
+        {{ title }}</a>
+      {{ /nav }}
+    </nav>
+  </div>
+</header>
+
+<!-- /header partial-->

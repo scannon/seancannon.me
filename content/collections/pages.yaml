@@ -8,3 +8,8 @@ structure:
       entry: home
     -
       entry: 85a018f1-7289-4d6b-b187-baa1a4a51ab3
+    -
+      entry: ad97d2b2-e06f-41f5-986a-afe842261ef3
+      children:
+        -
+          entry: 6459a960-da1d-4915-b321-3eb0c5478f04

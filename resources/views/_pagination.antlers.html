@@ -1,0 +1,13 @@
+{{ paginate }}
+{{ if prev_page || next_page }}
+
+<div class="my-20 flex justify-between">
+  <a href="{{ prev_page }}" class="{{ ! prev_page ?= 'opacity-25' }}">
+    &larr; Previous
+  </a>
+  <a href="{{ next_page }}" class="{{ ! next_page ?= 'opacity-25' }}">
+    Next &rarr;
+  </a>
+</div>
+{{ /if }}
+{{ /paginate }}

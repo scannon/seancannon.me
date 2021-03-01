@@ -1,20 +1,26 @@
-<div class="blog-post mt-16 mb-20">
+<div class="blog-post my-10">
 
-    <h1 class="mb-12 font-bold"> {{ title | title }} </h1>
-    <div
-        class="bg-gray-800 text-cream inline-block text-sm mb-10 pr-4 pl-16 -ml-16 uppercase tracking-widest py-1 rounded-r-full">
-        Published
-        {{ if categories}}
-        in {{ categories }}
-        {{ title }}
-        {{ /categories }}
-        {{ /if }}
-        on {{ date }}
+  <div class="w-full mx-auto mb-8 text-center">
+
+    {{ if categories}}
+    {{ categories }}
+    <p class="text-sm text-orange font-semibold tracking-wider uppercase">{{ title }}</p>
+    {{ /categories }}
+    {{ /if }}
+
+    <h1 title="{{ title | title }}">{{ title | title }}</h1>
+
+    <div class="flex justify-center items-center">
+      {{ svg src="slashes/slash-ziggy-1" class=" text-blue-green w-10" }}
+      <p class="text-headline text-base mx-4"> Written on {{ date }}</p>
+      {{ svg src="slashes/slash-ziggy-1" class=" text-blue-green w-10" }}
     </div>
-    <div class="content mt-4">
-        {{ excerpt }}
-        {{ svg src="" class=""}}
-        {{ content | widont }}
-    </div>
+
+  </div>
+
+  <div class="content mt-4">
+    {{ excerpt }}
+    {{ content | widont }}
+  </div>
 
 </div>

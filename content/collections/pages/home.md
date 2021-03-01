@@ -3,8 +3,8 @@ title: Home
 template: home
 author: 06c4481b-212c-4862-9d64-8b5c7e48a46b
 updated_by: 06c4481b-212c-4862-9d64-8b5c7e48a46b
-updated_at: 1609518718
-headline: 'I''m Sean Cannon.'
+updated_at: 1614554665
+headline: 'Sean Cannon'
 subheading: 'Customer support leader. Coffee lover. BBQ enthusiast. Fan of Javascript. Voracious reader. Ohioan.'
 id: home
 ---
