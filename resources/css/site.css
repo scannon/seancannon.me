@@ -1,128 +1,87 @@
 /* This is all you. */
-/* @import url('https://rsms.me/inter/inter.css'); */
+@import url('https://rsms.me/inter/inter.css');
+
+/* set some typographic defaults */
 
 body {
-    @apply antialiased flex flex-col h-screen bg-grey text-onyx text-lg leading-relaxed font-sans;
+    font-feature-settings: "frac" 1;
+}
+
+p {
+        @apply text-base md:text-2xl my-5;
+    }
+
+h1, h2, h3, h4, h5 {
+  @apply my-6
 }
 
 h1 {
-    @apply text-4xl font-bold tracking-tight leading-none mb-6 ;
+        @apply text-headline text-5xl md:text-7xl font-bold;
 }
 
- .post-list-heading {
-        a {
-            @apply font-extrabold no-underline;
-
-            background-image:linear-gradient(180deg,transparent 70%, #ffa69e 0);
-            background-position:4px bottom;
-            background-repeat:no-repeat
-        }
-
-        a:hover {
-            @apply no-underline;
-
-            --text-opacity:1;
-            color:rgba(12,24,36,var(--text-opacity));
-            background-image:linear-gradient(180deg,transparent 20%, #ffa69e 0)
-        }
+h2 {
+        @apply text-3xl md:text-4xl font-bold;
     }
 
-.content {
-    > h2 {
-        @apply text-2xl font-bold leading-none mt-4 py-6;
+h3 {
+        @apply text-xl md:text-3xl font-semibold;
     }
 
-    > h3 {
-        @apply text-xl font-semibold leading-none py-6;
+h4 {
+        @apply font-bold uppercase;
     }
 
-    > h4 {
-        @apply font-bold uppercase tracking-widest leading-none py-6;
+
+blockquote {
+        @apply text-xl text-headline font-black italic px-4 my-8 border-l-4 border-button;
     }
 
-    a {
-        @apply no-underline text-onyx border-onyx border-b border-solid;
+blockquote > p {
+        @apply text-xl my-2;
     }
 
-    a:hover {
-        @apply border-none;
-    }
 
-    > p {
-        @apply mb-6 text-lg;
-    }
-
-    > p:first-of-type {
-        @apply text-2xl;
-    }
-
-    > blockquote {
-        @apply text-center font-black italic px-4 mb-12 pt-6 text-3xl leading-tight;
-    }
-
-    > blockquote > p {
-        @apply text-3xl leading-tight;
-    }
-
-    img {
-        @apply my-12;
-    }
-
-    ul:not(.list-none) {
-        @apply pl-0 list-disc ml-10 mb-6 text-lg;
-        li {
-            @apply mb-1;
-        }
-    }
-
-    ol {
-        @apply pl-0 list-decimal ml-10 mb-6 text-lg;
-        > li {
-            @apply mb-1;
-        }
-    }
-
-    > p code,
-    > ul li *:not(pre) code,
-    > ul li > code,
-    > ol li *:not(pre) code,
-    > ol li > code {
-        @apply inline-block bg-gray-800 text-white text-sm p-1 font-mono leading-none whitespace-nowrap align-baseline;
-    }
-
-    > pre, pre&, > ul li pre, > ol li pre {
-        @apply flex p-0 bg-gray-800 text-gray-300 text-sm leading-loose mb-6 overflow-x-auto;
-    }
-
-    > pre code, pre code&, > ul li pre code, > ol li pre code {
-        @apply p-4;
-    }
-
-    > table {
-        @apply w-full text-left border border-gray-800 border-collapse mb-6 text-sm;
-        th {
-            @apply font-bold text-gray-800 bg-gray-200 p-2 uppercase tracking-widest border-t-4 border-b border-gray-800;
-        }
-
-        td {
-            @apply p-3 border-b border-gray-800 text-sm;
-        }
-
-        p {
-            @apply leading-normal;
-        }
-  }
+img {
+    @apply my-12;
 }
 
-/* Responsive Wangjangling */
-@screen lg {
-    h1 {
-        @apply text-6xl;
-    }
-
-    .content {
-        > h2 {
-            @apply text-3xl mt-4 py-6;
-        }
+a {
+    @apply text-button underline;
+    &:hover {
+        @apply text-paragraph;
     }
 }
+
+ul:not(.list-none) {
+    @apply pl-0 list-disc ml-10 mb-6 text-lg;
+    li {
+        @apply mb-1;
+    }
+}
+
+ol {
+    @apply pl-0 list-decimal ml-10 mb-6 text-lg;
+    > li {
+        @apply mb-1;
+    }
+}
+
+code {
+  @apply font-mono text-sm
+}
+
+table {
+    @apply w-full text-left border border-gray-800 border-collapse mb-6 text-sm;
+    th {
+        @apply font-bold text-gray-800 bg-gray-200 p-2 uppercase tracking-widest border-t-4 border-b border-gray-800;
+    }
+
+    td {
+        @apply p-3 border-b border-gray-800 text-sm;
+    }
+
+    p {
+        @apply leading-normal;
+    }
+}
+

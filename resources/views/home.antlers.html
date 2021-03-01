@@ -1,26 +1,17 @@
-<div class="home mt-16">
+<h1>{{ headline ?? title | widont:2 }}</h1>
+<p>{{ subheading }}</p>
 
-    <h1>{{ headline ?? title | widont:2 }}</h1>
-    <p>{{ subheading }}</p>
+<section class="article-list my-10">
 
-    <div class="recent-posts mt-10 mb-0">
-        <div class="flex content items-center">
-            <h4 class="">Recent blog posts</h4>
-        </div>
+  {{ collection:blog limit="5" as="posts" }}
+  {{ if no_results }}
+  <h2>No posts. :(</h2>
+  {{ /if }}
 
-        {{ collection from="blog" as="blog" limit="5" }}
-        <div class="post-list">
+  {{ posts }}
+  {{ partial:blog/_card }}
+  {{ /posts }}
+  {{ /collection:blog }}
 
-            {{ if no_results }}
-            <h2 class="italic tracking-tight">Nothing to see here.</h2>
-            {{ /if }}
 
-            {{ blog }}
-            {{ partial:blog/_card }}
-            {{ /blog }}
-
-        </div>
-        {{ /collection }}
-    </div>
-
-</div>
+</section>
