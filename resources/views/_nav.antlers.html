@@ -1,13 +1,13 @@
 <!-- header partial -->
 <header>
-  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-    <a class="flex font-medium items-center mb-4 md:mb-0 no-underline" href="{{ homepage }}">
+  <div class="container mx-auto flex flex-wrap py-5 flex-col md:flex-row items-center">
+    <a class="flex font-medium items-center mb-4 md:mb-0 no-underline text-jet-black" href="{{ homepage }}">
       {{ svg src="retro/cool-s-fat" class="h-6"}}
       <span class="ml-3 text-xl">Sean Cannon</span>
     </a>
 
     <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-      {{ nav include_home="true" }}
+      {{ nav }}
       <a href="{{ url }}" class="m-2 {{ is_current || is_parent ?= ' no-underline text-headline font-bold '}}">
         {{ title }}</a>
       {{ /nav }}

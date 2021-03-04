@@ -4,21 +4,21 @@
 
     {{ if categories}}
     {{ categories }}
-    <p class="text-sm text-orange font-semibold tracking-wider uppercase">{{ title }}</p>
+    <p class="text-sm text-rich-black font-semibold tracking-wider uppercase">{{ title }}</p>
     {{ /categories }}
     {{ /if }}
 
     <h1 title="{{ title | title }}">{{ title | title }}</h1>
 
     <div class="flex justify-center items-center">
-      {{ svg src="slashes/slash-ziggy-1" class=" text-blue-green w-10" }}
-      <p class="text-headline text-base mx-4"> Written on {{ date }}</p>
-      {{ svg src="slashes/slash-ziggy-1" class=" text-blue-green w-10" }}
+      {{ svg src="slashes/slash-ziggy-1" class=" text-orange w-10" }}
+      <p class="text-headline text-base mx-4">{{ date }}</p>
+      {{ svg src="slashes/slash-ziggy-1" class=" text-orange w-10" }}
     </div>
 
   </div>
 
-  <div class="content mt-4">
+  <div class="content mt-4 font-serif">
     {{ excerpt }}
     {{ content | widont }}
   </div>
